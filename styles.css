@@ -1,0 +1,101 @@
+.st0 {
+  clip-path: url('#clipper');
+  fill: none;
+  stroke: #8150CE;
+  stroke-width: 80;
+  stroke-dasharray: 4000;
+  stroke-dashoffset: 4000;
+  animation: draw 3s ease-in-out forwards;
+  animation-delay: 80ms;
+  stroke-linecap: round;
+}
+
+.orange {
+  fill: none;
+  stroke: #eca520;
+  stroke-width: 80;
+  clip-path: url('#clipper');
+  stroke-dasharray: 4000;
+  stroke-dashoffset: 4000;
+  animation: draw 3s ease-in-out forwards;
+  animation-delay: 50ms;
+  stroke-linecap: round;
+
+}
+
+.grey {
+  fill: none;
+  stroke: #858188;
+  stroke-width: 80;
+  clip-path: url('#clipper');
+  stroke-dasharray: 4000;
+  stroke-dashoffset: 4000;
+  animation: draw 3s ease-in-out forwards;
+  stroke-linecap: round;
+
+}
+
+.circle {
+  fill: #8150CE;
+}
+
+.st2 {
+  width: 500px;
+  fill: #8150CE;
+  transform: scale(5) translate(-44.8%, -28%);
+  display: none;
+}
+
+svg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+
+
+
+
+
+
+/* #one {
+  clip-path: url('#clipperOne');
+}
+
+#two {
+  clip-path: url('#clipperTwo');
+
+}
+
+#three {
+  clip-path: url('#clipperThree');
+}
+
+#four {
+  clip-path: url('#clipperFour');
+  animation-delay: 100s;
+}
+
+.st0 {
+  fill: none;
+  stroke: green;
+  stroke-width: 80;
+  stroke-dasharray: 5000;
+  stroke-dashoffset: 7000;
+  animation: draw 5s linear infinite;
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+} */
