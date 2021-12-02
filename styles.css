@@ -1,101 +1,59 @@
-.st0 {
-  clip-path: url('#clipper');
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+}
+
+.logoContainer {
+  width: 100%;
+}
+
+.Logos {
   fill: none;
+  stroke-width: 80;
+  stroke-linecap: round;
+  clip-path: url('#clipper');
+  stroke-dasharray: 4000;
+  stroke-dashoffset: 4000;
+  animation: draw 3s ease-in-out forwards;
+}
+
+.purpleLogo {
   stroke: #8150CE;
-  stroke-width: 80;
-  stroke-dasharray: 4000;
-  stroke-dashoffset: 4000;
-  animation: draw 3s ease-in-out forwards;
-  animation-delay: 80ms;
-  stroke-linecap: round;
+  animation-delay: 1.10s;
 }
 
-.orange {
-  fill: none;
+.orangeLogo {
   stroke: #eca520;
-  stroke-width: 80;
-  clip-path: url('#clipper');
-  stroke-dasharray: 4000;
-  stroke-dashoffset: 4000;
-  animation: draw 3s ease-in-out forwards;
-  animation-delay: 50ms;
-  stroke-linecap: round;
-
+  animation-delay: 1.05s;
 }
 
-.grey {
-  fill: none;
+.greyLogo {
   stroke: #858188;
-  stroke-width: 80;
-  clip-path: url('#clipper');
-  stroke-dasharray: 4000;
-  stroke-dashoffset: 4000;
-  animation: draw 3s ease-in-out forwards;
-  stroke-linecap: round;
-
+  animation-delay: 1s;
 }
 
 .circle {
   fill: #8150CE;
 }
 
-.st2 {
-  width: 500px;
+.shrinkingCircle {
+  border-radius: 50%;
   fill: #8150CE;
-  transform: scale(5) translate(-44.8%, -28%);
-  display: none;
+  transform: scale(5);
+  transform-origin: 618px 303.1px;
+  animation: shrink 1.5s ease-in-out forwards;
 }
 
-svg {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: auto;
+@keyframes shrink {
+  to {
+transform: scale(0); 
+transform-origin: 618px 303.1px;
+  }
 }
-
-
 
 @keyframes draw {
   to {
     stroke-dashoffset: 0;
   }
 }
-
-
-
-
-
-
-
-/* #one {
-  clip-path: url('#clipperOne');
-}
-
-#two {
-  clip-path: url('#clipperTwo');
-
-}
-
-#three {
-  clip-path: url('#clipperThree');
-}
-
-#four {
-  clip-path: url('#clipperFour');
-  animation-delay: 100s;
-}
-
-.st0 {
-  fill: none;
-  stroke: green;
-  stroke-width: 80;
-  stroke-dasharray: 5000;
-  stroke-dashoffset: 7000;
-  animation: draw 5s linear infinite;
-}
-
-@keyframes draw {
-  to {
-    stroke-dashoffset: 0;
-  }
-} */
