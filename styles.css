@@ -5,7 +5,7 @@ body {
 }
 
 .logoContainer {
-  width: 100%;
+  width: 70%;
 }
 
 .Logos {
@@ -47,14 +47,14 @@ body {
 
 .whiteCircle {
   fill: white;
-  transform: scale(1.01);
+  transform: scale(1.15);
   transform-origin: 618px 304.7px;
 }
 
-.shrinkingCircle {
+.shrinkingCircle { 
   border-radius: 50%;
   fill: #858188;
-  transform: scale(1.5) rotate(-15deg);
+  transform: scale(5) rotate(-15deg);
   transform-origin: 618px 304.7px;
   animation: shrink 1.75s ease-in-out forwards;
   transition-duration: 2s;
@@ -71,7 +71,35 @@ body {
 }
 
 .stripe {
+  transform: scale(1.15);
+  transform-origin: 618px 410px;
   fill: white;
+}
+
+.stripeReveal {
+  clip-path: url('#stripeClip');
+  fill: none;
+  stroke: white;
+  stroke-width: 30;
+  stroke-dasharray: 4000;
+  stroke-dashoffset: 4000;
+  animation: draw 5s forwards;
+  animation-delay: 2s;
+  stroke-linecap: round;
+}
+
+.sOne {
+ 
+}
+
+.sTwo {
+  stroke: #858188;
+  animation-delay: 1.9s;
+}
+
+.sThree {
+  stroke: #eca520;
+  animation-delay: 1.8s;
 }
 
 @keyframes colorChange {
