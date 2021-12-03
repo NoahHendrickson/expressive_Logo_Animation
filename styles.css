@@ -41,13 +41,13 @@ body {
   fill: #8150CE;
   transform: scale(0);
   animation: grow 1s ease-in-out forwards;
-  transform-origin: 618px 303.1px;
+  transform-origin: 618px 338.5px;
   animation-delay: 1s;
 }
 
 .whiteCircle {
   fill: white;
-  transform: scale(1.01);
+  transform: scale(1);
   transform-origin: 618px 303.1px;
 }
 
@@ -55,8 +55,14 @@ body {
   border-radius: 50%;
   fill: grey;
   transform: scale(4) rotate(-15deg);
-  transform-origin: 618px 303.1px;
-  animation: colorChange 3s, shrink 1.5s ease-in-out forwards;
+  transform-origin: 618px 338.5px;
+  animation: colorChange 3s forwards, shrink 1.5s ease-in-out forwards;
+}
+
+.stripeReveal {
+  clip-path: url('#stripe');
+  stroke: white;
+  stroke-width: 40;
 }
 
 @keyframes colorChange {
@@ -72,8 +78,8 @@ body {
 
 @keyframes shrink {
   to {
-    transform: scale(0) rotate(-20deg); 
-    transform-origin: 618px 303.1px;
+    transform: scale(1) rotate(-20deg); 
+    transform-origin: 618px 338.5px;
   }
 }
 
