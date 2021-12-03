@@ -20,35 +20,60 @@ body {
 
 .purpleLogo {
   stroke: #8150CE;
-  animation-delay: 1.10s;
+  animation-delay: 1.35s;
 }
 
 .orangeLogo {
   stroke: #eca520;
-  animation-delay: 1.05s;
+  animation-delay: 1.30s;
 }
 
 .greyLogo {
   stroke: #858188;
-  animation-delay: 1s;
+  animation-delay: 1.25s;
 }
 
 .circle {
   fill: #8150CE;
 }
 
+.purpleCircle {
+  fill: #8150CE;
+  transform: scale(0);
+  animation: grow 1s ease-in-out forwards;
+  transform-origin: 618px 303.1px;
+  animation-delay: 1s;
+}
+
+.whiteCircle {
+  fill: white;
+  transform: scale(1.01);
+  transform-origin: 618px 303.1px;
+}
+
 .shrinkingCircle {
   border-radius: 50%;
-  fill: #8150CE;
-  transform: scale(5);
+  fill: grey;
+  transform: scale(4) rotate(-15deg);
   transform-origin: 618px 303.1px;
-  animation: shrink 1.5s ease-in-out forwards;
+  animation: colorChange 3s, shrink 1.5s ease-in-out forwards;
+}
+
+@keyframes colorChange {
+  to {
+    fill: #8150CE;
+  }
+}
+@keyframes grow {
+  to {
+    transform: scale(1.02);
+  }
 }
 
 @keyframes shrink {
   to {
-transform: scale(0); 
-transform-origin: 618px 303.1px;
+    transform: scale(0) rotate(-20deg); 
+    transform-origin: 618px 303.1px;
   }
 }
 
