@@ -8,11 +8,12 @@ body {
 .nav-bar {
   height: 100px;
   display: flex;
+  justify-content: center;
 }
 
 .logoContainer {
   display: flex;
-  width: 50%;
+  width: 100%;
 }
 
 .logosReveal {
