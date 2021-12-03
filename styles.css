@@ -1,14 +1,15 @@
 * { box-sizing: border-box; }
 
 body {
+  background-color: white;
   margin: 0;
 }
 
 .logoContainer {
-  width: 70%;
+  width: 100%;
 }
 
-.Logos {
+.logosReveal {
   fill: none;
   stroke-width: 80;
   stroke-linecap: round;
@@ -18,29 +19,25 @@ body {
   animation: draw 2s ease-in-out forwards;
 }
 
-.purpleLogo {
+.purpleLogoReveal {
   stroke: #8150CE;
   animation-delay: 2.20s;
 }
 
-.orangeLogo {
+.orangeLogoReveal {
   stroke: #eca520;
   animation-delay: 2.15s;
 }
 
-.greyLogo {
+.greyLogoReveal {
   stroke: #858188;
   animation-delay: 2.1s;
-}
-
-.circle {
-  fill: #8150CE;
 }
 
 .purpleCircle {
   fill: #8150CE;
   transform: scale(0);
-  animation: grow 1.0s ease-in-out forwards;
+  animation: grow .75s ease-in-out forwards;
   transform-origin: 618px 304.7px;
   animation-delay: 1.25s;
 }
@@ -51,26 +48,31 @@ body {
   transform-origin: 618px 304.7px;
 }
 
-.shrinkingCircle { 
+.shrinkingOval { 
   border-radius: 50%;
-  fill: #858188;
   transform: scale(5) rotate(-15deg);
   transform-origin: 618px 304.7px;
-  animation: shrink 1.75s ease-in-out forwards;
+  animation: shrink .75s ease-in-out forwards;
   transition-duration: 2s;
+}
+
+.greyOval {
+  fill: #858188;
+  animation-delay: 100ms;
 }
 
 .orangeOval {
   fill: #eca520;
-  animation-delay: .2s;
+  animation-delay: 200ms;
 }
 
 .purpleOval {
   fill: #8150CE;
-  animation-delay: .4s;
+  animation-delay: 300ms;
 }
 
-.stripe {
+#stripeClip {
+  border-radius: 100%;
   transform: scale(1.15);
   transform-origin: 618px 410px;
   fill: white;
@@ -88,28 +90,19 @@ body {
   stroke-linecap: round;
 }
 
-.sOne {
- 
-}
-
-.sTwo {
+.greyStripe {
   stroke: #858188;
   animation-delay: 1.9s;
 }
 
-.sThree {
+.orangeStripe {
   stroke: #eca520;
   animation-delay: 1.8s;
 }
 
-@keyframes colorChange {
-  to {
-    fill: #8150CE;
-  }
-}
 @keyframes grow {
   to {
-    transform: scale(1.02);
+    transform: scale(1);
   }
 }
 
@@ -125,3 +118,11 @@ body {
     stroke-dashoffset: 0;
   }
 }
+
+/* not currently being used
+@keyframes colorChange {
+  to {
+    fill: #8150CE;
+  }
+}
+not currently being used */
