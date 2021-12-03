@@ -11,7 +11,7 @@ body {
 
 .logosReveal {
   fill: none;
-  stroke-width: 80;
+  stroke-width: 90;
   stroke-linecap: round;
   clip-path: url('#clipper');
   stroke-dasharray: 4000;
@@ -34,12 +34,17 @@ body {
   animation-delay: 2.1s;
 }
 
+.topHalfCircle {
+  fill: #8150CE;
+  width: 100%;
+}
+
 .purpleCircle {
   fill: #8150CE;
-  transform: scale(0);
-  animation: grow .75s ease-in-out forwards;
+  transform: scale(0) ;
+  animation: grow .75s ease-in-out forwards, slide 1s forwards;
   transform-origin: 618px 304.7px;
-  animation-delay: 1.25s;
+  animation-delay: 3.25s;
 }
 
 .whiteCircle {
@@ -98,6 +103,13 @@ body {
 .orangeStripe {
   stroke: #eca520;
   animation-delay: 1.8s;
+}
+
+@keyframes slide {
+  to {
+    transform: translate(100px);
+    transform-origin: 618px 304.7px;
+  }
 }
 
 @keyframes grow {
