@@ -15,22 +15,22 @@ body {
   clip-path: url('#clipper');
   stroke-dasharray: 4000;
   stroke-dashoffset: 4000;
-  animation: draw 3s ease-in-out forwards;
+  animation: draw 2s ease-in-out forwards;
 }
 
 .purpleLogo {
   stroke: #8150CE;
-  animation-delay: 1.35s;
+  animation-delay: 2.20s;
 }
 
 .orangeLogo {
   stroke: #eca520;
-  animation-delay: 1.30s;
+  animation-delay: 2.15s;
 }
 
 .greyLogo {
   stroke: #858188;
-  animation-delay: 1.25s;
+  animation-delay: 2.1s;
 }
 
 .circle {
@@ -40,23 +40,38 @@ body {
 .purpleCircle {
   fill: #8150CE;
   transform: scale(0);
-  animation: grow 1s ease-in-out forwards;
-  transform-origin: 618px 303.1px;
-  animation-delay: 1s;
+  animation: grow 1.0s ease-in-out forwards;
+  transform-origin: 618px 304.7px;
+  animation-delay: 1.25s;
 }
 
 .whiteCircle {
   fill: white;
   transform: scale(1.01);
-  transform-origin: 618px 303.1px;
+  transform-origin: 618px 304.7px;
 }
 
 .shrinkingCircle {
   border-radius: 50%;
-  fill: grey;
-  transform: scale(4) rotate(-15deg);
-  transform-origin: 618px 303.1px;
-  animation: colorChange 3s, shrink 1.5s ease-in-out forwards;
+  fill: #858188;
+  transform: scale(1.5) rotate(-15deg);
+  transform-origin: 618px 304.7px;
+  animation: shrink 1.75s ease-in-out forwards;
+  transition-duration: 2s;
+}
+
+.orangeOval {
+  fill: #eca520;
+  animation-delay: .2s;
+}
+
+.purpleOval {
+  fill: #8150CE;
+  animation-delay: .4s;
+}
+
+.stripe {
+  fill: white;
 }
 
 @keyframes colorChange {
@@ -73,7 +88,7 @@ body {
 @keyframes shrink {
   to {
     transform: scale(0) rotate(-20deg); 
-    transform-origin: 618px 303.1px;
+    transform-origin: 618px 304.7px;
   }
 }
 
