@@ -5,8 +5,14 @@ body {
   margin: 0;
 }
 
+.nav-bar {
+  height: 100px;
+  display: flex;
+}
+
 .logoContainer {
-  width: 100%;
+  display: flex;
+  width: 50%;
 }
 
 .logosReveal {
@@ -39,7 +45,7 @@ body {
   transform: scale(0);
   animation: grow .75s ease-in-out forwards;
   transform-origin: 618px 304.7px;
-  animation-delay: 1.25s;
+  animation-delay: 1s;
 }
 
 .whiteCircle {
@@ -50,7 +56,7 @@ body {
 
 .shrinkingOval { 
   border-radius: 50%;
-  transform: scale(5) rotate(-15deg);
+  transform: scale(.8) rotate(-15deg);
   transform-origin: 618px 304.7px;
   animation: shrink .75s ease-in-out forwards;
   transition-duration: 2s;
