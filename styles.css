@@ -5,15 +5,9 @@ body {
   margin: 0;
 }
 
-.nav-bar {
-  height: 100px;
-  display: flex;
-  justify-content: center;
-}
-
 .logoContainer {
   display: flex;
-  width: 100%;
+  width: 50%;
 }
 
 .logosReveal {
@@ -85,11 +79,18 @@ body {
   fill: white;
 }
 
+#stripeClipTwo {
+  border-radius: 100%;
+  transform: scale(1) translate(0px, -10px);
+  transform-origin: 618px 410px;
+  fill: white;
+}
+
 .stripeReveal {
   clip-path: url('#stripeClip');
   fill: none;
   stroke: white;
-  stroke-width: 30;
+  stroke-width: 35;
   stroke-dasharray: 4000;
   stroke-dashoffset: 4000;
   animation: draw 5s forwards;
@@ -98,11 +99,15 @@ body {
 }
 
 .greyStripe {
+  clip-path: url('#stripeClipTwo');
+  stroke-width: 30;
   stroke: #858188;
   animation-delay: 1.9s;
 }
 
 .orangeStripe {
+  clip-path: url('#stripeClipTwo');
+  stroke-width: 30;
   stroke: #eca520;
   animation-delay: 1.8s;
 }
