@@ -45,11 +45,11 @@ svg {
 /* #clip-circle {
   transform: scale(1);
   transform-origin: 400px 0;
-}
-
-#clip-stripe {
-  clip-path: url('#clip-circle');
 } */
+
+#second-clip-stripe {
+  clip-path: url('#clip-circle');
+}
 
 .stripe-reveal {
   clip-path: url('#clip-stripe');
@@ -67,11 +67,13 @@ svg {
 }
 
 .orange-stripe {
+  clip-path: url('#second-clip-stripe');
   stroke: rgb(255, 171, 74);
   animation-delay: 1.10s
 }
 
 .grey-stripe {
+  clip-path: url('#second-clip-stripe');
   stroke: grey;
   animation-delay: 1s;
 }
