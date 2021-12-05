@@ -47,6 +47,11 @@ svg {
   animation-delay: 1s;
 }
 
+/* INSTRUCTIONS FOR STRIPE
+There are three clipPaths for the stripe animation. The white stripe only needs top-clip-stripe. 
+The orange and grey stripes need clipped by orange-grey-clip-stripe. 
+The clippath orange-grey-clip-stripe needs clipped by the clip-circle clip path.  */
+
 #orange-grey-clip-stripe {
   clip-path: url('#clip-circle');
 }
@@ -61,10 +66,12 @@ svg {
   stroke-linecap: round;
 }
 
+/* The white-stripe class stroke MUST match the background color  */
 .white-stripe {
   stroke: white;
   animation-delay: 2.15s
 }
+/* The white-stripe class stroke MUST match the background color  */
 
 .orange-stripe {
   clip-path: url('#orange-grey-clip-stripe');
@@ -94,6 +101,9 @@ svg {
   transform: scale(1) rotate(-35deg);
   transform-origin: 450px 250px;
   animation: shrink 1s forwards;
+}
+
+.purple-oval {
   fill: #8150CE;
   animation-delay: 0s;
 }
