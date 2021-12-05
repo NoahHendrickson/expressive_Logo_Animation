@@ -5,125 +5,61 @@ body {
   margin: 0;
 }
 
-.logoContainer {
-  display: flex;
-  width: 50%;
-}
-
-.logosReveal {
+.spiral-reveal {
+  clip-path: url('#clip-spiral');
   fill: none;
-  stroke-width: 80;
-  stroke-linecap: round;
-  clip-path: url('#clipper');
+  stroke-width: 80px;
   stroke-dasharray: 4000;
   stroke-dashoffset: 4000;
-  animation: draw 2s ease-in-out forwards;
+  animation: draw 4s forwards;
 }
 
-.purpleLogoReveal {
+.purple-spiral {
   stroke: #8150CE;
-  animation-delay: 2.20s;
+  animation-delay: 1.35s;
 }
 
-.orangeLogoReveal {
-  stroke: #eca520;
-  animation-delay: 2.15s;
+.orange-spiral {
+  stroke: rgb(255, 171, 74);
+  animation-delay: 1.30s;
+
 }
 
-.greyLogoReveal {
-  stroke: #858188;
-  animation-delay: 2.1s;
+.grey-spiral {
+  stroke: grey;
+  animation-delay: 1.25s;
 }
 
-.purpleCircle {
+.purple-circle {
   fill: #8150CE;
   transform: scale(0);
-  animation: grow .75s ease-in-out forwards;
-  transform-origin: 618px 304.7px;
+  animation: grow 1s forwards;
+  transform-origin: 450px 250px;
+}
+
+.stripe-reveal {
+  clip-path: url('#clip-stripe');
+  fill: none;
+  stroke-width: 35px;
+  stroke-dasharray: 4000;
+  stroke-dashoffset: 4000;
+  animation: draw 4s forwards;
   animation-delay: 1s;
 }
 
-.whiteCircle {
-  fill: white;
-  transform: scale(1.15);
-  transform-origin: 618px 304.7px;
-}
-
-.shrinkingOval { 
-  border-radius: 50%;
-  transform: scale(.8) rotate(-15deg);
-  transform-origin: 618px 304.7px;
-  animation: shrink .75s ease-in-out forwards;
-  transition-duration: 2s;
-}
-
-.greyOval {
-  fill: #858188;
-  animation-delay: 100ms;
-}
-
-.orangeOval {
-  fill: #eca520;
-  animation-delay: 200ms;
-}
-
-.purpleOval {
-  fill: #8150CE;
-  animation-delay: 300ms;
-}
-
-#stripeClip {
-  border-radius: 100%;
-  transform: scale(1.15);
-  transform-origin: 618px 410px;
-  fill: white;
-}
-
-#stripeClipTwo {
-  border-radius: 100%;
-  transform: scale(1) translate(0px, -10px);
-  transform-origin: 618px 410px;
-  fill: white;
-}
-
-.stripeReveal {
-  clip-path: url('#stripeClip');
-  fill: none;
+.white-stripe {
   stroke: white;
-  stroke-width: 35;
-  stroke-dasharray: 4000;
-  stroke-dashoffset: 4000;
-  animation: draw 5s forwards;
-  animation-delay: 2s;
-  stroke-linecap: round;
+  animation-delay: 1.1s
 }
 
-.greyStripe {
-  clip-path: url('#stripeClipTwo');
-  stroke-width: 30;
-  stroke: #858188;
-  animation-delay: 1.9s;
+.orange-stripe {
+  stroke: rgb(255, 171, 74);
+  animation-delay: 1s
 }
 
-.orangeStripe {
-  clip-path: url('#stripeClipTwo');
-  stroke-width: 30;
-  stroke: #eca520;
-  animation-delay: 1.8s;
-}
 
-@keyframes grow {
-  to {
-    transform: scale(1);
-  }
-}
 
-@keyframes shrink {
-  to {
-    transform: scale(0) rotate(-20deg); 
-    transform-origin: 618px 304.7px;
-  }
-}
+
 
 @keyframes draw {
   to {
@@ -131,10 +67,8 @@ body {
   }
 }
 
-/* not currently being used
-@keyframes colorChange {
+@keyframes grow {
   to {
-    fill: #8150CE;
+    transform: scale(1);
   }
 }
-not currently being used */
