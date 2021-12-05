@@ -9,50 +9,50 @@ svg {
   width: 100%;
 }
 
+.logo {
+  position: relative;
+}
+
 .spiral-reveal {
   clip-path: url('#clip-spiral');
   fill: none;
   stroke-width: 80px;
   stroke-dasharray: 4000;
   stroke-dashoffset: 4000;
-  animation: draw 4s forwards;
+  animation: draw 3s forwards;
   stroke-linecap: round;
 }
 
 .purple-spiral {
   stroke: #8150CE;
-  animation-delay: 1.35s;
+  animation-delay: 2.35s;
 }
 
 .orange-spiral {
   stroke: rgb(255, 171, 74);
-  animation-delay: 1.30s;
+  animation-delay: 2.30s;
 
 }
 
 .grey-spiral {
   stroke: grey;
-  animation-delay: 1.25s;
+  animation-delay: 2.25s;
 }
 
 .purple-circle {
   fill: #8150CE;
   transform: scale(0);
-  animation: grow 1s forwards;
+  animation: grow 1s ease-in-out forwards;
   transform-origin: 450px 250px;
+  animation-delay: 1s;
 }
 
-/* #clip-circle {
-  transform: scale(1);
-  transform-origin: 400px 0;
-} */
-
-#second-clip-stripe {
+#orange-grey-clip-stripe {
   clip-path: url('#clip-circle');
 }
 
 .stripe-reveal {
-  clip-path: url('#clip-stripe');
+  clip-path: url('#top-clip-stripe');
   fill: none;
   stroke-width: 35px;
   stroke-dasharray: 4000;
@@ -63,24 +63,20 @@ svg {
 
 .white-stripe {
   stroke: white;
-  animation-delay: 1.15s
+  animation-delay: 2.15s
 }
 
 .orange-stripe {
-  clip-path: url('#second-clip-stripe');
+  clip-path: url('#orange-grey-clip-stripe');
   stroke: rgb(255, 171, 74);
-  animation-delay: 1.10s
+  animation-delay: 2.10s
 }
 
 .grey-stripe {
-  clip-path: url('#second-clip-stripe');
+  clip-path: url('#orange-grey-clip-stripe');
   stroke: grey;
-  animation-delay: 1s;
+  animation-delay: 2s;
 }
-
-
-
-
 
 @keyframes draw {
   to {
@@ -91,5 +87,30 @@ svg {
 @keyframes grow {
   to {
     transform: scale(1);
+  }
+}
+
+.oval {
+  transform: scale(1) rotate(-35deg);
+  transform-origin: 450px 250px;
+  animation: shrink 1s forwards;
+  fill: #8150CE;
+  animation-delay: 0s;
+}
+
+.grey-oval {
+  fill: grey;
+  animation-delay: .1s;
+}
+
+.orange-oval {
+  fill: rgb(255, 171, 74);
+  animation-delay: .2s;
+}
+
+@keyframes shrink {
+  to {
+    transform: scale(0) rotate(-35deg);
+    background: #8150CE;
   }
 }
