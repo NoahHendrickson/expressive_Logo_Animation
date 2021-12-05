@@ -9,6 +9,10 @@ body {
   width: 100%;
 }
 
+svg {
+  width: 75%;
+}
+
 .spiral-reveal {
   clip-path: url('#clip-spiral');
   fill: none;
