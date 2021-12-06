@@ -1,16 +1,12 @@
 * { box-sizing: border-box; }
 
 body {
-  background-color: white;
+  background-color: black;
   margin: 0;
 }
 
 svg {
   width: 100%;
-}
-
-.logo {
-  position: relative;
 }
 
 .spiral-reveal {
@@ -19,7 +15,7 @@ svg {
   stroke-width: 80px;
   stroke-dasharray: 4000;
   stroke-dashoffset: 4000;
-  animation: draw 3s forwards;
+  animation: draw 3s cubic-bezier(.94,-0.01,1,.45) forwards;
   stroke-linecap: round;
 }
 
@@ -31,7 +27,6 @@ svg {
 .orange-spiral {
   stroke: rgb(255, 171, 74);
   animation-delay: 2.30s;
-
 }
 
 .grey-spiral {
@@ -42,7 +37,7 @@ svg {
 .purple-circle {
   fill: #8150CE;
   transform: scale(0);
-  animation: grow 1s ease-in-out forwards;
+  animation: grow 1s cubic-bezier(.94,-0.01,1,.45) forwards;
   transform-origin: 450px 250px;
   animation-delay: 1s;
 }
@@ -68,7 +63,7 @@ The clippath orange-grey-clip-stripe needs clipped by the clip-circle clip path.
 
 /* The white-stripe class stroke MUST match the background color  */
 .white-stripe {
-  stroke: white;
+  stroke: black;
   animation-delay: 2.15s
 }
 /* The white-stripe class stroke MUST match the background color  */
