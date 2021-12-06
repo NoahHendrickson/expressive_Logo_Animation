@@ -15,7 +15,7 @@ svg {
   stroke-width: 80px;
   stroke-dasharray: 4000;
   stroke-dashoffset: 4000;
-  animation: draw 3s cubic-bezier(.94,-0.01,1,.45) forwards;
+  animation: draw 1.5s cubic-bezier(.7,.03,1,.2) forwards;
   stroke-linecap: round;
 }
 
