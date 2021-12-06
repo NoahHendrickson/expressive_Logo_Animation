@@ -1,7 +1,7 @@
 * { box-sizing: border-box; }
 
 body {
-  background-color: black;
+  background-color: white;
   margin: 0;
 }
 
@@ -37,7 +37,7 @@ svg {
 .purple-circle {
   fill: #8150CE;
   transform: scale(0);
-  animation: grow 1s cubic-bezier(.94,-0.01,1,.45) forwards;
+  animation: grow 1s forwards;
   transform-origin: 450px 250px;
   animation-delay: 1s;
 }
