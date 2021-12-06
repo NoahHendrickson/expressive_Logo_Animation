@@ -119,3 +119,7 @@ The clippath orange-grey-clip-stripe needs clipped by the clip-circle clip path.
     background: #8150CE;
   }
 }
+
+.st1 {
+  fill-rule: evenodd;
+}
