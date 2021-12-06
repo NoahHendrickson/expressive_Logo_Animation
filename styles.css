@@ -1,7 +1,7 @@
 * { box-sizing: border-box; }
 
 body {
-  background-color: black;
+  background-color: #28202b;
   margin: 0;
 }
 
@@ -21,31 +21,41 @@ svg {
 
 .purple-spiral {
   stroke: #8150CE;
-  animation-delay: 2.35s;
+  animation-delay: 2.5s;
 }
 
 .orange-spiral {
   stroke: rgb(255, 171, 74);
-  animation-delay: 2.30s;
+  animation-delay: 2.45s;
 }
 
 .grey-spiral {
   stroke: grey;
-  animation-delay: 2.25s;
+  animation-delay: 2.4s;
 }
 
 .purple-circle {
+  clip-path: url('#clip-circle');
   fill: #8150CE;
+  animation: grow 1s cubic-bezier(.94,-0.01,1,.45) forwards, gonzo 1s forwards;
   transform: scale(0);
-  animation: grow 1s cubic-bezier(.94,-0.01,1,.45) forwards;
   transform-origin: 450px 250px;
-  animation-delay: 1s;
+  animation-delay: 1s, 2.1s;
 }
 
-/* INSTRUCTIONS FOR STRIPE
-There are three clipPaths for the stripe animation. The white stripe only needs top-clip-stripe. 
-The orange and grey stripes need clipped by orange-grey-clip-stripe. 
-The clippath orange-grey-clip-stripe needs clipped by the clip-circle clip path.  */
+.purple-stripe {
+  clip-path: url('#orange-grey-clip-stripe');
+  fill: none;
+  stroke-width: 35;
+  stroke: #8150CE;
+  stroke-dasharray: 400;
+  stroke-dashoffset: 1000;
+  animation: drawDisappear 1.5s forwards,
+  grow 1s cubic-bezier(.94,-0.01,1,.45) forwards;;
+  transform: scale(0);
+  transform-origin: 450px 250px;
+  animation-delay: 2s, 1s;
+}
 
 #orange-grey-clip-stripe {
   clip-path: url('#clip-circle');
@@ -57,27 +67,36 @@ The clippath orange-grey-clip-stripe needs clipped by the clip-circle clip path.
   stroke-width: 35px;
   stroke-dasharray: 4000;
   stroke-dashoffset: 4000;
-  animation: draw 4s forwards;
+  animation: draw 1s;
   stroke-linecap: round;
 }
 
-/* The white-stripe class stroke MUST match the background color  */
-.white-stripe {
-  stroke: black;
-  animation-delay: 2.15s
-}
-/* The white-stripe class stroke MUST match the background color  */
-
 .orange-stripe {
   clip-path: url('#orange-grey-clip-stripe');
+  fill: none;
+  stroke-width: 35;
   stroke: rgb(255, 171, 74);
-  animation-delay: 2.10s
+  stroke-dasharray: 400;
+  stroke-dashoffset: 1000;
+  animation: drawDisappear 1.5s forwards,
+  grow 1s cubic-bezier(.94,-0.01,1,.45) forwards;;
+  transform: scale(0);
+  transform-origin: 450px 250px;
+  animation-delay: 2.2s, 1s;
 }
 
 .grey-stripe {
   clip-path: url('#orange-grey-clip-stripe');
+  fill: none;
+  stroke-width: 35;
   stroke: grey;
-  animation-delay: 2s;
+  stroke-dasharray: 400;
+  stroke-dashoffset: 1000;
+  animation: drawDisappear 1.5s forwards,
+  grow 1s cubic-bezier(.94,-0.01,1,.45) forwards;;
+  transform: scale(0);
+  transform-origin: 450px 250px;
+  animation-delay: 2.1s, 1s;
 }
 
 @keyframes draw {
@@ -86,9 +105,21 @@ The clippath orange-grey-clip-stripe needs clipped by the clip-circle clip path.
   }
 }
 
+@keyframes drawDisappear {
+  to {
+    stroke-dashoffset: 400;
+  }
+}
+
 @keyframes grow {
   to {
     transform: scale(1);
+  }
+}
+
+@keyframes gonzo {
+  100% {
+    fill-rule: evenodd;
   }
 }
 
