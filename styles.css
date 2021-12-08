@@ -38,7 +38,7 @@ svg {
   clip-path: url('#clip-circle');
   fill: #8150CE;
   fill-rule: evenodd;
-  animation: grow 1s cubic-bezier(.94,-0.01,1,.45) forwards, gonzo 1s forwards;
+  animation: grow 1s cubic-bezier(.94,-0.01,1,.45) forwards;
   transform: scale(0);
   transform-origin: 450px 250px;
   animation-delay: 1s, 2.1s;
@@ -93,12 +93,6 @@ svg {
     transform: scale(1);
   }
 }
-
-/* @keyframes gonzo {
-  100% {
-    fill-rule: evenodd;
-  }
-} */
 
 .oval {
   transform: scale(1) rotate(-35deg);
