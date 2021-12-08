@@ -5,6 +5,10 @@ body {
   margin: 0;
 }
 
+.logo {
+width: 70%;
+}
+
 svg {
   width: 100%;
 }
@@ -21,17 +25,17 @@ svg {
 
 .purple-spiral {
   stroke: #8150CE;
-  animation-delay: 2.5s;
+  animation-delay: 3.5s;
 }
 
 .orange-spiral {
   stroke: rgb(255, 171, 74);
-  animation-delay: 2.45s;
+  animation-delay: 3.45s;
 }
 
 .grey-spiral {
   stroke: grey;
-  animation-delay: 2.4s;
+  animation-delay: 3.4s;
 }
 
 .purple-circle {
@@ -51,10 +55,11 @@ svg {
 .stripe-reveal {
   clip-path: url('#orange-grey-clip-stripe');
   fill: none;
+  stroke-linecap: round;
   stroke-width: 35;
   stroke-dasharray: 400;
   stroke-dashoffset: 1000;
-  animation: drawDisappear 1.5s forwards,
+  animation: drawDisappear 1.5s cubic-bezier(.13,.71,1,.14) forwards,
   grow 1s cubic-bezier(.94,-0.01,1,.45) forwards;;
   transform: scale(0);
   transform-origin: 450px 250px;
@@ -97,7 +102,7 @@ svg {
 .oval {
   transform: scale(1) rotate(-35deg);
   transform-origin: 450px 250px;
-  animation: shrink 1s forwards;
+  animation: shrink 1s cubic-bezier(.63,.22,.81,.15) forwards;
 }
 
 .purple-oval {
