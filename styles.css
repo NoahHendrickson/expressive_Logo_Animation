@@ -1,7 +1,7 @@
 * { box-sizing: border-box; }
 
 body {
-  background-color: #28202b;
+  background-color: white;
   margin: 0;
 }
 
@@ -37,6 +37,7 @@ svg {
 .purple-circle {
   clip-path: url('#clip-circle');
   fill: #8150CE;
+  fill-rule: evenodd;
   animation: grow 1s cubic-bezier(.94,-0.01,1,.45) forwards, gonzo 1s forwards;
   transform: scale(0);
   transform-origin: 450px 250px;
@@ -60,6 +61,7 @@ svg {
 }
 
 .purple-stripe {
+  clip-path: url('#clip-circle');
   stroke: #8150CE;
   animation-delay: 2s, 1s;
 }
@@ -92,11 +94,11 @@ svg {
   }
 }
 
-@keyframes gonzo {
+/* @keyframes gonzo {
   100% {
     fill-rule: evenodd;
   }
-}
+} */
 
 .oval {
   transform: scale(1) rotate(-35deg);
