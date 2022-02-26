@@ -8,7 +8,11 @@ body {
 }
 
 .logo {
+<<<<<<< HEAD
   width: 25%;
+=======
+width: 30%;
+>>>>>>> b7021ca1c66ca2c7b7961e7007a1305a0a58c95b
 }
 
 svg {
